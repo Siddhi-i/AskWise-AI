@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AskWise AI - Your Smart FAQ Assistant</title>
+    <meta name="description" content="AI-powered FAQ assistant for quick support. Ask anything, get instant answers.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Material Symbols -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-mode">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="material-symbols-outlined logo-icon">smart_toy</span>
+                AskWise AI
+            </div>
+            <div class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <button id="theme-toggle" class="icon-btn" aria-label="Toggle Dark Mode">
+                    <span class="material-symbols-outlined" id="theme-icon">dark_mode</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Ask Anything, Get Instant Answers</h1>
+                <p>AI-powered FAQ assistant for quick support</p>
+                <button class="cta-button" id="start-chat-btn">Start Chatting</button>
+            </div>
+        </section>
+
+        <!-- Chat Section -->
+        <section class="chat-section" id="chat-section">
+            <div class="chat-container">
+                <!-- Chat Header -->
+                <div class="chat-header">
+                    <div class="header-info">
+                        <span class="material-symbols-outlined ai-avatar">support_agent</span>
+                        <div>
+                            <h2>AskWise Assistant</h2>
+                            <span class="status-indicator">Online</span>
+                        </div>
+                    </div>
+                    <button class="icon-btn" id="clear-chat-btn" title="Clear Chat History">
+                        <span class="material-symbols-outlined">delete_sweep</span>
+                    </button>
+                </div>
+
+                <!-- Chat Messages Area -->
+                <div class="chat-messages" id="chat-messages">
+                    <!-- Messages will be injected here via JS -->
+                    <div class="welcome-message">
+                        <span class="material-symbols-outlined welcome-icon">waving_hand</span>
+                        <h3>Hi there! 👋</h3>
+                        <p>I'm AskWise AI. How can I help you today?</p>
+                        
+                        <div class="faq-suggestions">
+                            <button class="faq-btn">What is this app?</button>
+                            <button class="faq-btn">How does it work?</button>
+                            <button class="faq-btn">Contact support</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Input Area -->
+                <div class="chat-input-container">
+                    <div class="typing-indicator hidden" id="typing-indicator">
+                        AskWise AI is typing<span>.</span><span>.</span><span>.</span>
+                    </div>
+                    <form id="chat-form" class="chat-form">
+                        <input type="text" id="chat-input" placeholder="Type your question here..." autocomplete="off" required>
+                        <button type="submit" id="send-btn" aria-label="Send Message" disabled>
+                            <span class="material-symbols-outlined">send</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
